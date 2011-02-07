@@ -1,7 +1,11 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :testimonials, :only => [:index]
+Refinery::Application.routes.draw do
+  resources :testimonials, :only => [:index, :show]
 
-  map.namespace(:admin, :path_prefix => 'refinery') do |admin|
-    admin.resources :testimonials
+  scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
+    resources :testimonials, :except => :show do
+      collection do
+        post :update_positions
+      end
+    end
   end
 end

@@ -43,5 +43,4 @@ class CreateTestimonials < ActiveRecord::Migration
 
     drop_table :testimonials
   end
-
 end
