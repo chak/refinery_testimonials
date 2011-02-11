@@ -1,6 +1,8 @@
 Testimonials plugin for RefineryCMS
 http://github.com/resolve/Refinery
 
+This was written by https://github.com/tsdbrown I just forked and created a gem version. Theory has it that I will reintegrate this with the maintainer of the original plugin at some point.
+
 This is our first attempt at giving something back to the open source community. The guys at resolve
 have done a great job with refinerycms and made the project easily extendable with engines. We hope
 others find this plugin useful and would love to here any feedback or advice on improving it : )
