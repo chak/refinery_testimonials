@@ -19,7 +19,8 @@ pages that is used to display your list in the front end.
 
 Gem Installation
 ================
-Coming soon...
+Add the following to you gemfile
+gem 'refinerycms-testimonials'
 
 
 Show a Random Testimonial On Any Page
