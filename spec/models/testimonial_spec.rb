@@ -5,7 +5,13 @@ describe Testimonial do
   def reset_testimonial(options = {})
     @valid_attributes = {
       :id => 1,
-      :title => "RSpec is great for testing too"
+      :quote => "RSpec is great for testing too",
+      :name => "RSpec is great for testing too",
+      :company => "RSpec is great for testing too",
+      :job_title => "RSpec is great for testing too",
+      :website => "RSpec is great for testing too",
+      :quoted_on => "RSpec is great for testing too",
+      :position => 2
     }
 
     @testimonial.destroy! if @testimonial
@@ -14,10 +20,6 @@ describe Testimonial do
 
   before(:each) do
     reset_testimonial
-  end
-
-  context "validations" do
-    
   end
 
 end
