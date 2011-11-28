@@ -13,7 +13,7 @@
           :title => 'Remove this testimonial forever' %>
     </span>
     
-    <%= [content_tag(:b, h(testimonial.name)), h(testimonial.job_title), h(testimonial.company)].reject(&:blank?).join(", ") %>
+    <%= [content_tag(:b, h(testimonial.name)), h(testimonial.job_title), h(testimonial.company)].reject(&:blank?).join(", ").html_safe %>
     <span class="preview">&nbsp;</span>
     <p style="display:none;"><%= h(testimonial.quote) %></p>
   </span>
