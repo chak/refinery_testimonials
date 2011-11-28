@@ -3,7 +3,7 @@ class TestimonialsController < ApplicationController
   before_filter :find_page
 
   def index
-    @testimonials = Testimonial.paginate(:all, :order => "position ASC", :page => params[:page], :per_page => RefinerySetting.find_or_set(:testimonials_per_page, 10))
+    @testimonials = Testimonial.paginate(:order => "position ASC", :page => params[:page], :per_page => RefinerySetting.find_or_set(:testimonials_per_page, 10))
     present(@page)
   end
 
