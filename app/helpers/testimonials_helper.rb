@@ -2,7 +2,8 @@ module TestimonialsHelper
 
   # Helper method to be included in the page layout
   def display_page_testimonial_if_setup
-    if @page.show_a_testimonial? && (random_testimonial = Testimonial.random)
+    # if @page.show_a_testimonial? && (random_testimonial = Testimonial.random)
+    if (random_testimonial = Testimonial.random)
       content_for :head, stylesheet_link_tag('testimonials')
       render :partial => '/testimonials/testimonial', :locals => {:testimonial => random_testimonial}
     end
