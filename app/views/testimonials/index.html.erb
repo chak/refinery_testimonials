@@ -1,7 +1,7 @@
 <% content_for :head, stylesheet_link_tag('testimonials') %>
 
 <% content_for :body_content_left do %>
-  <%= @page[:body]  %>
+  <%= @page[:body].html_safe  %>
 
   <%= will_paginate @testimonials %>
 
@@ -13,7 +13,7 @@
 <% end %>
 
 <% content_for :body_content_right do %>
-  <%= @page[:side_body]  %>
+  <%= @page[:side_body].html_safe  %>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
